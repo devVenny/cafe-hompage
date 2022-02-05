@@ -1,19 +1,24 @@
 "use strict";
 
-const home = (req, res) => {
-  res.render("home/main");
+const output = {
+  home: (req, res) => {
+    res.render("home/main");
+  },
+  login: (req, res) => {
+    res.render("onBoard/login");
+  },
+  register: (req, res) => {
+    res.render("onBoard/register");
+  },
 };
 
-const login = (req, res) => {
-  res.render("onBoard/login");
-};
-
-const register = (req, res) => {
-  res.render("onBoard/register");
+const process = {
+  login: (req, res) => {
+    console.log(req.body);
+  },
 };
 
 module.exports = {
-  home,
-  login,
-  register,
+  output,
+  process,
 };

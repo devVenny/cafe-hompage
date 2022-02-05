@@ -1,13 +1,13 @@
 "use strict";
 
-const { Router } = require("express");
 const expres = require("express");
 const routes = expres.Router();
-
 const ctrl = require("./home.ctrl");
 
-routes.get("/", ctrl.home);
-routes.get("/login", ctrl.login);
-routes.get("/register", ctrl.register);
+routes.get("/", ctrl.output.home);
+routes.get("/login", ctrl.output.login);
+routes.get("/register", ctrl.output.register);
+
+routes.post("/login", ctrl.process.login);
 
 module.exports = routes;

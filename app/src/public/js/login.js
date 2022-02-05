@@ -22,6 +22,8 @@ function handleClick() {
     .then((res) => {
       return res.json();
     })
-    .then((res) => console.log(res))
+    .then((res) => {
+      return res;
+    })
     .catch((err) => console.error("데이터 패치 실패"));
 }
