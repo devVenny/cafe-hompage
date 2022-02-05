@@ -23,7 +23,11 @@ function handleClick() {
       return res.json();
     })
     .then((res) => {
-      return res;
+      if (res.success) {
+        location.href = "/";
+      } else {
+        alert(`${res.msg}`);
+      }
     })
     .catch((err) => console.error("데이터 패치 실패"));
 }
