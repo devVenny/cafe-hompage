@@ -12,6 +12,4 @@ app.set("view engine", "ejs");
 // 미들 웨어
 app.use("/", home);
 
-app.listen(3000, () => {
-  console.log("서버 가동");
-});
+module.exports = app;
