@@ -4,12 +4,10 @@ const { Router } = require("express");
 const expres = require("express");
 const routes = expres.Router();
 
-routes.get("/", (req, res) => {
-  res.render("onBoard/login");
-});
+const ctrl = require("./home.ctrl");
 
-routes.get("/register", (req, res) => {
-  res.render("onBoard/register");
-});
+routes.get("/", ctrl.home);
+routes.get("/login", ctrl.login);
+routes.get("/register", ctrl.register);
 
 module.exports = routes;
