@@ -6,10 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
     <script defer src="js/login.js"></script>
+    <link rel="stylesheet" href="css/onBoard.css" />
   </head>
   <body>
-    <input id="id" type="text" placeholder="아이디" />
-    <input id="psword" type="password" placeholder="비밀번호" />
-    <button id="button">로그인</button>
+    <div class="login-page">
+      <div class="form">
+        <!-- <form class="register-form">
+      <input type="text" placeholder="name"/>
+      <input type="password" placeholder="password"/>
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form> -->
+        <form class="login-form">
+          <input type="text" id="id" placeholder="username" />
+          <input type="password" id="psword" placeholder="password" />
+          <button id="button">login</button>
+          <p class="message">
+            Not registered? <a href="/register">Create an account</a>
+          </p>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
