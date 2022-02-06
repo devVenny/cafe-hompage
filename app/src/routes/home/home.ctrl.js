@@ -19,21 +19,11 @@ const process = {
     const user = new User(req.body);
     const response = await user.login();
     return res.json(response);
-    // return res.json(response);
-    // const repsonse = user.login();
-    // return res.json(response);
-    //   const client = req.body;
-    //   const id = client.id
-    //   const psword = client.psword;
-    //   const newUser = UserStorage.getUsers("id", "psword");
-    //   if (id) {
-    //     return { success: false, msg: "비밀번호가 틀렸습니다." };
-    //   }
-    //   return { success: false, msg: "존재하지 않는 아이디입니다." };
-    // },
   },
-  register: (req, res) => {
-    console.log(req.body);
+  register: async (req, res) => {
+    const user = new User(req.body); // body에 입력한 id,name,psword가 담긴 User 객체 생성
+    const response = await user.register();
+    return res.json(response);
   },
 };
 

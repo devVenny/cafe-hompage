@@ -33,11 +33,12 @@ function handleClick(e) {
     body: JSON.stringify(req),
   })
     .then((res) => {
+      console.log(res);
       return res.json();
     })
     .then((res) => {
       if (res.success) {
-        location.href = "/";
+        location.href = "/login";
       } else {
         alert(`${res.msg}`);
       }

@@ -29,5 +29,5 @@ function handleClick() {
         alert(`${res.msg}`);
       }
     })
-    .catch((err) => console.error("데이터 패치 실패"));
+    .catch((err) => console.error("데이터 패치에 실패했어요ㅠ"));
 }
