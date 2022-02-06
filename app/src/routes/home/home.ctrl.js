@@ -1,6 +1,6 @@
 "use strict";
 
-const UserStorage = require("../../models/UserStorage");
+const User = require("../../models/User");
 
 const output = {
   home: (req, res) => {
@@ -13,10 +13,24 @@ const output = {
     res.render("onBoard/register");
   },
 };
+
 const process = {
-  login: (req, res) => {
-    const newUser = UserStorage.getUsers("id", "psword");
-    console.log(newUser);
+  login: async (req, res) => {
+    const user = new User(req.body);
+    const response = await user.login();
+    return res.json(response);
+    // return res.json(response);
+    // const repsonse = user.login();
+    // return res.json(response);
+    //   const client = req.body;
+    //   const id = client.id
+    //   const psword = client.psword;
+    //   const newUser = UserStorage.getUsers("id", "psword");
+    //   if (id) {
+    //     return { success: false, msg: "비밀번호가 틀렸습니다." };
+    //   }
+    //   return { success: false, msg: "존재하지 않는 아이디입니다." };
+    // },
   },
 };
 

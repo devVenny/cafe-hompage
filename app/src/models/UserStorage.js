@@ -1,34 +1,38 @@
 "use strict";
 
-class UserStorage {
-  static #users = {
-    id: ["hs421", "hs0421"],
-    psword: ["123", "1234"],
-  };
+const fs = require("fs").promises;
 
+class UserStorage {
   static getUsers(...fields) {
-    const users = this.#users;
+    // const users = this.#users;
     const newUser = fields.reduce((newUser, field) => {
       if (users.hasOwnProperty(field)) {
         newUser[field] = users[field];
         return newUser;
       }
     }, {});
-    return newUser;
+    return newUser; // 가입된 유저들의 id, pswrod를 담은 새로운 배열 생성
   }
-  // login() {
-  //   const client = this.body;
-  //   const id = client.id;
-  //   const psword = client.psword;
-  //   const idx = user.id.indexOf(id);
-  //   if (user.id.includes(id)) {
-  //     if (user.psword[idx] === psword) {
-  //       return { success: true };
-  //     }
-  //     return { success: false, msg: "비밀번호가 틀렸습니다." };
-  //   }
-  //   return { success: false, msg: "존재하지 않는 아이디입니다." };
-  // }
+
+  static #getUserInfo(data, clienID) {
+    const users = JSON.parse(data);
+    const idx = users.id.indexOf(clienID);
+    const fields = Object.keys(users);
+    const userInfo = fields.reduce((userInfo, field) => {
+      userInfo[field] = users[field][idx];
+      return userInfo;
+    }, {});
+    return userInfo;
+  }
+
+  static getUserInfo(clienID) {
+    return fs
+      .readFile("./src/databases/user.json")
+      .then((data) => {
+        return this.#getUserInfo(data, clienID);
+      })
+      .catch((err) => console.error(err));
+  }
 }
 
 module.exports = UserStorage;
