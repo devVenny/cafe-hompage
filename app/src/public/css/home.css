@@ -399,3 +399,23 @@ button {
 .bakery-right {
   width: 50%;
 }
+
+/* COUPON */
+
+#coupon {
+  height: 70vh;
+  background-color: var(--deep-green);
+  display: flex;
+  justify-content: space-between;
+}
+
+.coupon-image {
+  background: url("/images/coupon-main.jpeg");
+}
+
+.coupon-title {
+  display: inline-block;
+  line-height: 3.5rem;
+  margin-top: 0px;
+  letter-spacing: 0.7rem;
+}
