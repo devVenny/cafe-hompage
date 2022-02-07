@@ -113,13 +113,6 @@ body {
   position: relative;
 }
 
-.bg {
-  height: 100%;
-  background: url("/images/background.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .home-text {
   position: absolute;
   top: 52%;
@@ -131,8 +124,8 @@ body {
 }
 
 .home-title {
-  font-size: 68px;
-  font-weight: 600;
+  font-size: 72px;
+  font-weight: 400;
   letter-spacing: 1.1rem;
 }
 
