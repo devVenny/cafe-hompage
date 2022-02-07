@@ -3,10 +3,11 @@
 const signInBtn = document.querySelector(".signIn-btn"),
   loginBtn = document.querySelector(".login-btn");
 
-signInBtn.addEventListener("click", handleClick);
-loginBtn.addEventListener("click", handleClick);
+console.log(signInBtn, loginBtn);
+signInBtn.addEventListener("click", handleBtnClick);
+loginBtn.addEventListener("click", handleBtnClick);
 
-function handleClick(e) {
+function handleBtnClick(e) {
   if (e.target.value === "logIn") {
     location.href = "/login";
   }
