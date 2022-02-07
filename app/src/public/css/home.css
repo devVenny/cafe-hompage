@@ -11,6 +11,8 @@
   --border-grey: rgba(0, 0, 0, 0.1);
 }
 
+/* Global css */
+
 * {
   color: var(--font-color-main);
   font-family: "Playfair Display", serif;
@@ -32,112 +34,7 @@ body {
   position: relative;
 }
 
-/* Section */
-.section {
-  max-width: 1440px;
-  text-align: center;
-  box-sizing: border-box;
-  margin: 0px auto;
-}
-
-.section-layout {
-  background-color: var(--deep-green);
-  margin-bottom: 30px;
-  box-sizing: border-box;
-}
-
-.section-text {
-  text-align: center;
-  padding: 32px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 50%;
-}
-
-.btn {
-  letter-spacing: 1px;
-  padding: 6px 20px;
-  border-radius: 20px;
-  font-weight: 400;
-  transition: all 0.2s ease-in-out;
-  font-size: 14px;
-  border: 1px solid black;
-}
-
-.section-title {
-  font-weight: 700;
-  font-size: 2.3rem;
-  letter-spacing: 20px;
-  color: #ffffff;
-}
-
-.section-description {
-  max-width: 400px;
-  margin: 0 auto;
-  margin-bottom: 40px;
-}
-
-.section-description h3 {
-  font-weight: 400;
-  font-size: 22px;
-  letter-spacing: 4px;
-}
-
-.section-title,
-.section-description h3,
-.section-btn {
-  color: #ffffff;
-}
-
-.section-btn {
-  border: 1px solid #ffffff;
-  margin: 0 auto;
-}
-
-.section-btn:hover {
-  background-color: rgba(245, 245, 245, 0.397);
-}
-
-.section-image-container {
-  width: 50%;
-  margin: 35px;
-  overflow: hidden;
-}
-
-/* header */
-
-#home {
-  height: calc(100vh - 106px);
-  width: 100%;
-  position: relative;
-}
-
-.home-text {
-  position: absolute;
-  top: 52%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  font-weight: 600;
-  text-align: center;
-}
-
-.home-title {
-  font-size: 72px;
-  font-weight: 400;
-  letter-spacing: 1.1rem;
-}
-
-.home-subtitle {
-  font-size: 24px;
-  margin-top: 40px;
-}
-
-button {
-  all: unset;
-  cursor: pointer;
-}
+/* HEADER */
 
 #header {
   color: black;
@@ -238,6 +135,113 @@ button {
 
 .login-btn:hover {
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* SECTION */
+.section {
+  max-width: 1440px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0px auto;
+}
+
+.section-layout {
+  background-color: var(--deep-green);
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.section-text {
+  text-align: center;
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.btn {
+  letter-spacing: 1px;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-weight: 400;
+  transition: all 0.2s ease-in-out;
+  font-size: 14px;
+  border: 1px solid black;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 2.3rem;
+  letter-spacing: 20px;
+  color: #ffffff;
+}
+
+.section-description {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.section-description h3 {
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 4px;
+}
+
+.section-title,
+.section-description h3,
+.section-btn {
+  color: #ffffff;
+}
+
+.section-btn {
+  border: 1px solid #ffffff;
+  margin: 0 auto;
+}
+
+.section-btn:hover {
+  background-color: rgba(245, 245, 245, 0.397);
+}
+
+.section-image-container {
+  width: 50%;
+  margin: 35px;
+  overflow: hidden;
+}
+
+/* HOME */
+
+#home {
+  height: calc(100vh - 106px);
+  width: 100%;
+  position: relative;
+}
+
+.home-text {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 72px;
+  font-weight: 400;
+  letter-spacing: 1.1rem;
+}
+
+.home-subtitle {
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
 }
 
 /* ABOUT */
@@ -350,38 +354,6 @@ button {
   background-color: #717171;
 }
 
-/* ----> leaves */
-
-.leaf {
-  display: block;
-  width: 110px;
-  position: absolute;
-  z-index: -100;
-}
-
-.leaf-blue {
-  top: 80%;
-  transform: rotate(10deg);
-}
-
-.leaf-green {
-  top: 2%;
-  left: 13%;
-  transform: rotate(-5deg);
-}
-
-.leaf-red--big {
-  top: 0;
-  right: 5%;
-  transform: rotate(10deg);
-}
-
-.leaf-red--small {
-  top: 50%;
-  left: 10%;
-  transform: rotate(-20deg);
-}
-
 /* COFFEE */
 
 #coffee {
@@ -413,4 +385,17 @@ button {
 .section-image:hover {
   filter: grayscale(0);
   transform: scale(1.04);
+}
+
+/* BAKERY */
+
+#bakery {
+  background-color: var(--deep-green);
+  display: flex;
+  justify-content: space-between;
+  height: 70vh;
+}
+
+.bakery-right {
+  width: 50%;
 }
