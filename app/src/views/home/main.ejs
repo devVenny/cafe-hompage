@@ -5,8 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <script
+      src="https://kit.fontawesome.com/9cd36ea70d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/home.css" />
+    <script defer src="js/main.js"></script>
   </head>
   <body>
-    <h2>이곳은 홈 화면입니다</h2>
+    <!-- Header -->
+    <header id="header" class="section">
+      <div class="header-left">
+        <a class="header__logo" href="#">
+          <i class="fas fa-republican"></i>
+        </a>
+
+        <ul class="header__nav">
+          <li class="header__menu">
+            <a href="./menus.html">Menu</a>
+          </li>
+          <li class="header__photo">
+            <a href="#">Photo</a>
+          </li>
+          <li class="header__info">
+            <a href="#">About</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header-right">
+        <div class="find-store">
+          <i class="fas fa-map-marker-alt"></i><span>Find a store</span>
+        </div>
+        <button class="btn signIn-btn" value="signIn">Sign in</button>
+        <button class="btn login-btn" value="logIn">Log in</button>
+      </div>
+    </header>
+    <div id="context">hello</div>
   </body>
 </html>

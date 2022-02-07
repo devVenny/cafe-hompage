@@ -3,8 +3,11 @@
 const fs = require("fs").promises;
 
 class UserStorage {
-  static #getUsers(data, fields) {
+  static #getUsers(data, isAll, fields) {
     const users = JSON.parse(data);
+    if (isAll) {
+      return users;
+    }
     const newUser = fields.reduce((newUser, field) => {
       if (users.hasOwnProperty(field)) {
         newUser[field] = users[field];
@@ -12,15 +15,6 @@ class UserStorage {
       }
     }, {});
     return newUser; // 가입된 유저들의 id, name, psword을 담은 새로운 배열 생성
-  }
-
-  static getUsers(...fields) {
-    return fs
-      .readFile("./src/databases/user.json")
-      .then((data) => {
-        return this.#getUsers(data, fields);
-      })
-      .catch((err) => console.error(err));
   }
 
   static #getUserInfo(data, clienID) {
@@ -34,6 +28,15 @@ class UserStorage {
     return userInfo;
   }
 
+  static getUsers(isAll, ...fields) {
+    return fs
+      .readFile("./src/databases/user.json")
+      .then((data) => {
+        return this.#getUsers(data, isAll, fields);
+      })
+      .catch((err) => console.error(err));
+  }
+
   static getUserInfo(clienID) {
     return fs
       .readFile("./src/databases/user.json")
@@ -44,7 +47,7 @@ class UserStorage {
   }
 
   static async save(client) {
-    const users = await this.getUsers("id", "username", "psword");
+    const users = await this.getUsers(true);
     if (users.id.includes(client.id)) {
       throw "중복되는 아이디입니다.";
     }
