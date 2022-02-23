@@ -13,35 +13,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,700&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,700&display=swap"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/globalStyle.css">
-    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/globalStyle.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <script defer src="js/menu.js"></script>
   </head>
   <body>
     <!-- Header -->
     <header id="header" class="section">
       <div class="header-left">
-        <a class="header__logo" href="/index.html">
+        <div class="header__logo">
           <i class="fas fa-republican"></i>
-        </a>
+        </div>
 
         <ul class="header__nav">
           <li class="header__menu">
-            <a href="../menu.html">Menu</a>
-          </li>
-          <li class="header__photo">
-            <a href="#">Photo</a>
-          </li>
-          <li class="header__info">
-            <a href="#">Info</a>
+            <a class="menuBtn">Menu</a>
           </li>
         </ul>
       </div>
       <div class="header-right">
         <div class="find-store">
-          <i class="fas fa-map-marker-alt"></i><span>Find a store</span>
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Find a store</span>
         </div>
         <button class="btn signIn-btn">Sign in</button>
         <button class="btn login-btn">Log in</button>
@@ -49,7 +45,7 @@
     </header>
 
     <div id="menu-container">
-      <!-- Menu Category -->
+      <!-- Menus side bar -->
       <div id="menu-category">
         <div class="category-wrapper">
           <h3 class="category-title">Drinks</h3>
@@ -73,29 +69,133 @@
             <li data-filter="cake">Cake</li>
           </ul>
         </div>
-        <div class="category-wrapper">
-          <h3 class="category-title">Merchandise</h3>
-          <ul>
-            <li data-filter="coffee-bean">Coffee bean</li>
-            <li data-filter="eco-bag">Eco bag</li>
-            <li data-filter="cup">Cup</li>
-          </ul>
-        </div>
       </div>
 
-    <!-- Menus side bar -->
+      <!-- Menus -->
       <div id="menus">
         <a class="menus-title" href="/menus.html">Menu</a>
-          <div class="menus-container">
-            <div class="menus-container__title"></div>
-            <div class="link-container">
-            </div>
+        <div class="menus-container" data-container="drinks">
+          <div class="menus-container__title">Drinks</div>
+          <div class="link-container">
+            <a
+              href="#"
+              class="linkOverlay__primary"
+              data-key="category"
+              data-category="coffee"
+            >
+              <div class="menus__image"></div>
+              <div class="menus__text">Coffee</div>
+            </a>
+            <a
+              href="#"
+              class="linkOverlay__primary"
+              data-key="category"
+              data-category="non-Coffee"
+            >
+              <div class="menus__image"></div>
+              <div class="menus__text">Non-Coffee</div>
+            </a>
+            <a
+              href="#"
+              class="linkOverlay__primary"
+              data-key="category"
+              data-category="tea"
+            >
+              <div class="menus__image"></div>
+              <div class="menus__text">Tea</div>
+            </a>
+            <a
+              href="#"
+              class="linkOverlay__primary"
+              data-key="category"
+              data-category="fraffe"
+            >
+              <div class="menus__image"></div>
+              <div class="menus__text">Fraffe</div>
+            </a>
+            <a
+              href="#"
+              class="linkOverlay__primary"
+              data-key="category"
+              data-category="smoothie"
+            >
+              <div class="menus__image"></div>
+              <div class="menus__text">Smoothie</div>
+            </a>
+            <a
+              href="#"
+              class="linkOverlay__primary"
+              data-key="category"
+              data-category="juice"
+            >
+              <div class="menus__image"></div>
+              <div class="menus__text">Juice</div>
+            </a>
+            <a
+              href="#"
+              class="linkOverlay__primary"
+              data-key="category"
+              data-category="ade"
+            >
+              <div class="menus__image"></div>
+              <div class="menus__text">Ade</div>
+            </a>
+          </div>
+        </div>
+        <div class="menus-container" data-container="bakery">
+          <div class="menus-container__title">Bakery</div>
+          <div class="link-container">
+            <a
+              href="#"
+              class="linkOverlay__primary"
+              data-key="category"
+              data-category="scone"
+            >
+              <div class="menus__image"></div>
+              <div class="menus__text">Scone</div>
+            </a>
+            <a
+              href="#"
+              class="linkOverlay__primary"
+              data-key="category"
+              data-category="financier"
+            >
+              <div class="menus__image"></div>
+              <div class="menus__text">Financier</div>
+            </a>
+            <a
+              href="#"
+              class="linkOverlay__primary"
+              data-key="category"
+              data-category="madeleine"
+            >
+              <div class="menus__image"></div>
+              <div class="menus__text">Madeleine</div>
+            </a>
+            <a
+              href="#"
+              class="linkOverlay__primary"
+              data-key="category"
+              data-category="tigre"
+            >
+              <div class="menus__image"></div>
+              <div class="menus__text">Tigre</div>
+            </a>
+            <a
+              href="#"
+              class="linkOverlay__primary"
+              data-key="category"
+              data-category="cake"
+            >
+              <div class="menus__image"></div>
+              <div class="menus__text">Cake</div>
+            </a>
           </div>
         </div>
       </div>
     </div>
 
-        <!-- Footer -->
+    <!-- Footer -->
     <footer id="footer">
       <div class="footer-top">
         <div class="footer-metainfo">

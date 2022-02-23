@@ -53,6 +53,7 @@ body {
 }
 
 .header__logo {
+  cursor: pointer;
   display: Flex;
   justify-content: center;
   align-items: center;

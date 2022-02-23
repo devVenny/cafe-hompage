@@ -1,9 +1,26 @@
 "use strict";
 
+// navigation 클릭 이벤트
+
+const logo = document.querySelector(".header__logo");
+
+logo.addEventListener("click", () => {
+  location.reload();
+});
+
+const menuBtn = document.querySelector(".menuBtn");
+
+menuBtn.addEventListener("click", goToMenu);
+
+function goToMenu() {
+  location.href = "/menu";
+}
+
+// 회원가입, 로그인  화면 이동 버튼
+
 const signInBtn = document.querySelector(".signIn-btn"),
   loginBtn = document.querySelector(".login-btn");
 
-console.log(signInBtn, loginBtn);
 signInBtn.addEventListener("click", handleBtnClick);
 loginBtn.addEventListener("click", handleBtnClick);
 
@@ -13,6 +30,8 @@ function handleBtnClick(e) {
   }
   location.href = "/register";
 }
+
+// 이미지 넘기기 버튼
 
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
@@ -50,12 +69,4 @@ function handleClick(whichBtn) {
   }
   imageWrapper[index].classList.add(CLASSNAME__SHOW);
   dotControl[index].classList.add(CLASSNAME__ACTIVE);
-}
-
-const menuBtn = document.querySelector(".menuBtn");
-
-menuBtn.addEventListener("click", goToMenu);
-
-function goToMenu() {
-  location.href = "/menu";
 }
