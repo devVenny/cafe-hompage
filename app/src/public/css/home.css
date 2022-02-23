@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --font-color-main: black;
   --forest-green: rgb(23, 92, 23);
   --light-brown: #bc9246;
@@ -10,7 +10,7 @@
   --deep-green: #13301f;
   --border-grey: rgba(0, 0, 0, 0.1);
 }
-
+/* 
 /* Global css */
 
 * {
@@ -34,8 +34,9 @@ body {
   position: relative;
   width: 100%;
 }
+*/ */
 
-/* HEADER */
+/* HEADER
 
 #header {
   color: black;
@@ -136,7 +137,7 @@ body {
 
 .login-btn:hover {
   background-color: rgba(0, 0, 0, 0.7);
-}
+} */
 
 /* SECTION */
 .section {

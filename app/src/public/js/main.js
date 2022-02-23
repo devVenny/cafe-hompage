@@ -51,3 +51,11 @@ function handleClick(whichBtn) {
   imageWrapper[index].classList.add(CLASSNAME__SHOW);
   dotControl[index].classList.add(CLASSNAME__ACTIVE);
 }
+
+const menuBtn = document.querySelector(".menuBtn");
+
+menuBtn.addEventListener("click", goToMenu);
+
+function goToMenu() {
+  location.href = "/menu";
+}
