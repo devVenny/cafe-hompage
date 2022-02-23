@@ -12,6 +12,9 @@ const output = {
   register: (req, res) => {
     res.render("onBoard/register");
   },
+  menu: (req, res) => {
+    res.render("menu/menu");
+  },
 };
 
 const process = {

@@ -1,0 +1,145 @@
+#menu-container {
+  display: flex;
+}
+
+#menu-category {
+  width: 18%;
+  padding: 40px 60px;
+}
+
+#menu-category::after {
+  margin-top: 40px;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: var(--border-grey);
+}
+
+#menus {
+  width: 78%;
+  padding: 40px 95px 40px 110px;
+}
+
+/* Menu-category */
+
+.category-wrapper ul {
+  padding-left: 20px;
+}
+
+.category-wrapper ul li {
+  width: 100px;
+  color: rgba(0, 0, 0, 0.58);
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.category-wrapper ul li::after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--deep-green);
+  opacity: 0;
+  margin-left: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.category-wrapper ul li:hover::after,
+.category-wrapper ul li:hover {
+  opacity: 1;
+  color: var(--deep-green);
+}
+
+.category-title {
+  margin-top: 0;
+}
+
+/* Menus */
+
+.menus-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.menus-container {
+  margin-top: 60px;
+}
+
+.menus-container__title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-grey);
+  padding-bottom: 25px;
+}
+
+.link-container {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+/* Each Menu */
+
+.linkOverlay__primary {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menus__image {
+  width: 112px;
+  height: 112px;
+  background: url("/images/brown-latte.png");
+  background-position: center center;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px 1px black;
+}
+
+.menus__text {
+  width: 50%;
+  display: Flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.menus-title span {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.menus-title span::before {
+  content: ">";
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.menus__temp {
+  display: inline;
+  font-size: 15px;
+  color: #5e5e64;
+}
+
+.cold {
+  margin-left: 5px;
+}
+
+.small-heading {
+  font-size: 18px;
+  color: var(--main-grey);
+  font-weight: 400;
+  margin-left: 7px;
+}
